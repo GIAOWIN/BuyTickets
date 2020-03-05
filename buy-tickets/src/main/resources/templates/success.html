@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>爬取结果</title>
+    <style type="text/css">
+        table {border-collapse: collapse; font-size: 14px; width: 80%; margin: auto}
+        table, th, td {border: 1px solid darkslategray;padding: 10px}
+    </style>
+</head>
+<body>
+<div style="text-align: center">
+    <span style="color: darkslategray; font-size: 30px">爬取成功！</span>
+    <hr/>
+    <table class="list">
+        <tr>
+            <th>id</th>
+            <th>网盘路径</th>
+            <th>密码</th>
+            <th>备注</th>
+        </tr>
+        <tr th:each="pan : ${pans}">
+            <td th:text="${pan.id}">1</td>
+            <td th:text="${pan.url}">张三</td>
+            <td th:text="${user.password}">zhangsan</td>
+            <td th:text="${user.describe}">1</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
